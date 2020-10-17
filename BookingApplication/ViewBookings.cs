@@ -41,7 +41,6 @@ namespace BookingApplication
 
             txtSignInEmail.Text = Login.Email;
             iconbtnEdit.Visible = false;
-
         }
 
         private void btnSearchEmail_Click(object sender, EventArgs e)
