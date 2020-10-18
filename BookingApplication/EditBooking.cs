@@ -136,7 +136,8 @@ namespace BookingApplication
                     if(editTotal > total)
                     {
                         string UpdatePayment = "Original Price: £" + total.ToString() + Environment.NewLine + "New Payment: £" + editTotal.ToString()
-                        + Environment.NewLine + Environment.NewLine + "Would you like to pay the remaining cost of: £" + (editTotal - total);
+                        + Environment.NewLine + Environment.NewLine + "Remaining Cost to be paid: £" + (editTotal - total) 
+                        + Environment.NewLine + Environment.NewLine + "Confirm?";
                         string captionUpdatePayment = "Payment";
 
                         var resultUpdatePayment = MessageBox.Show(UpdatePayment, captionUpdatePayment, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -180,7 +181,7 @@ namespace BookingApplication
                         }
                         else
                         {
-                            const string LogoutConfirmation = "Payment Cancelled";
+                            const string LogoutConfirmation = "Payment Cancelled, you have not been charged";
                             const string caption = "Payment";
 
                             var result = MessageBox.Show(LogoutConfirmation, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -235,7 +236,7 @@ namespace BookingApplication
                         }
                         else
                         {
-                            const string LogoutConfirmation = "Payment Cancelled";
+                            const string LogoutConfirmation = "Payment Cancelled, you have not been charged";
                             const string caption = "Payment";
 
                             var result = MessageBox.Show(LogoutConfirmation, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);

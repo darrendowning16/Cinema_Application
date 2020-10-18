@@ -52,6 +52,7 @@
             // 
             // btnClearAll
             // 
+            this.btnClearAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearAll.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearAll.Location = new System.Drawing.Point(122, 345);
             this.btnClearAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -66,7 +67,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(29, 84);
+            this.lblName.Location = new System.Drawing.Point(29, 89);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(42, 18);
             this.lblName.TabIndex = 8;
@@ -76,7 +77,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(29, 147);
+            this.lblEmail.Location = new System.Drawing.Point(29, 150);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(39, 18);
             this.lblEmail.TabIndex = 9;
@@ -86,7 +87,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(30, 207);
+            this.lblPassword.Location = new System.Drawing.Point(30, 210);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(66, 18);
             this.lblPassword.TabIndex = 10;
@@ -96,7 +97,7 @@
             // 
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPassword.Location = new System.Drawing.Point(30, 275);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(30, 272);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(115, 18);
             this.lblConfirmPassword.TabIndex = 11;
@@ -226,7 +227,7 @@
             this.txtPassword.CustomButton.UseSelectable = true;
             this.txtPassword.CustomButton.Visible = false;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(33, 237);
+            this.txtPassword.Location = new System.Drawing.Point(33, 232);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -259,7 +260,7 @@
             this.txtConfirmPassword.CustomButton.UseSelectable = true;
             this.txtConfirmPassword.CustomButton.Visible = false;
             this.txtConfirmPassword.Lines = new string[0];
-            this.txtConfirmPassword.Location = new System.Drawing.Point(34, 308);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(34, 293);
             this.txtConfirmPassword.MaxLength = 32767;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
@@ -290,6 +291,7 @@
             // 
             // iconBtnBack
             // 
+            this.iconBtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnBack.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconBtnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             this.iconBtnBack.IconColor = System.Drawing.Color.Black;
@@ -308,6 +310,7 @@
             // 
             // iconBtnRegister
             // 
+            this.iconBtnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnRegister.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconBtnRegister.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.iconBtnRegister.IconColor = System.Drawing.Color.Black;
@@ -345,6 +348,7 @@
             this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Register";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxRegister)).EndInit();
             this.ResumeLayout(false);

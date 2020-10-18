@@ -38,6 +38,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movieTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookingApplicationDataSet = new BookingApplication.BookingApplicationDataSet();
             this.bookingsTableAdapter = new BookingApplication.BookingApplicationDataSetTableAdapters.BookingsTableAdapter();
@@ -52,13 +59,6 @@
             this.iconbtnEdit = new FontAwesome.Sharp.IconButton();
             this.icnbtnHome = new FontAwesome.Sharp.IconButton();
             this.lblNoRecords = new System.Windows.Forms.Label();
-            this.BookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.movieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.movieTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingApplicationDataSet)).BeginInit();
@@ -137,6 +137,73 @@
             this.dataGridView1.Size = new System.Drawing.Size(1090, 370);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // BookingID
+            // 
+            this.BookingID.DataPropertyName = "BookingID";
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.BookingID.DefaultCellStyle = dataGridViewCellStyle2;
+            this.BookingID.HeaderText = "ID";
+            this.BookingID.Name = "BookingID";
+            this.BookingID.ReadOnly = true;
+            this.BookingID.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // bookingEmailDataGridViewTextBoxColumn
+            // 
+            this.bookingEmailDataGridViewTextBoxColumn.DataPropertyName = "BookingEmail";
+            this.bookingEmailDataGridViewTextBoxColumn.HeaderText = "Booking Email";
+            this.bookingEmailDataGridViewTextBoxColumn.Name = "bookingEmailDataGridViewTextBoxColumn";
+            this.bookingEmailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookingEmailDataGridViewTextBoxColumn.Width = 230;
+            // 
+            // movieDataGridViewTextBoxColumn
+            // 
+            this.movieDataGridViewTextBoxColumn.DataPropertyName = "Movie";
+            this.movieDataGridViewTextBoxColumn.HeaderText = "Movie";
+            this.movieDataGridViewTextBoxColumn.Name = "movieDataGridViewTextBoxColumn";
+            this.movieDataGridViewTextBoxColumn.ReadOnly = true;
+            this.movieDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // movieTimeDataGridViewTextBoxColumn
+            // 
+            this.movieTimeDataGridViewTextBoxColumn.DataPropertyName = "MovieTime";
+            dataGridViewCellStyle4.Format = "t";
+            dataGridViewCellStyle4.NullValue = null;
+            this.movieTimeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.movieTimeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.movieTimeDataGridViewTextBoxColumn.Name = "movieTimeDataGridViewTextBoxColumn";
+            this.movieTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.movieTimeDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // ticketPriceDataGridViewTextBoxColumn
+            // 
+            this.ticketPriceDataGridViewTextBoxColumn.DataPropertyName = "TicketPrice";
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.ticketPriceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ticketPriceDataGridViewTextBoxColumn.HeaderText = "Ticket Price";
+            this.ticketPriceDataGridViewTextBoxColumn.Name = "ticketPriceDataGridViewTextBoxColumn";
+            this.ticketPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ticketPriceDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // paymentTypeDataGridViewTextBoxColumn
+            // 
+            this.paymentTypeDataGridViewTextBoxColumn.DataPropertyName = "PaymentType";
+            this.paymentTypeDataGridViewTextBoxColumn.HeaderText = "Payment Type";
+            this.paymentTypeDataGridViewTextBoxColumn.Name = "paymentTypeDataGridViewTextBoxColumn";
+            this.paymentTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.paymentTypeDataGridViewTextBoxColumn.Width = 160;
             // 
             // bookingsBindingSource
             // 
@@ -232,7 +299,7 @@
             this.txtboxBookingEmail.SelectionStart = 0;
             this.txtboxBookingEmail.ShortcutsEnabled = true;
             this.txtboxBookingEmail.Size = new System.Drawing.Size(250, 30);
-            this.txtboxBookingEmail.Style = MetroFramework.MetroColorStyle.Black;
+            this.txtboxBookingEmail.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtboxBookingEmail.TabIndex = 6;
             this.txtboxBookingEmail.UseSelectable = true;
             this.txtboxBookingEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -322,9 +389,9 @@
             this.lblBookingEmail.ForeColor = System.Drawing.Color.White;
             this.lblBookingEmail.Location = new System.Drawing.Point(278, 3);
             this.lblBookingEmail.Name = "lblBookingEmail";
-            this.lblBookingEmail.Size = new System.Drawing.Size(195, 30);
+            this.lblBookingEmail.Size = new System.Drawing.Size(204, 30);
             this.lblBookingEmail.TabIndex = 14;
-            this.lblBookingEmail.Text = "Enter your Booking Email";
+            this.lblBookingEmail.Text = "Enter your Booking Email:";
             this.lblBookingEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // iconbtnEdit
@@ -376,73 +443,6 @@
             this.lblNoRecords.TabIndex = 10;
             this.lblNoRecords.Text = "No Bookings Found!";
             this.lblNoRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BookingID
-            // 
-            this.BookingID.DataPropertyName = "BookingID";
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = null;
-            this.BookingID.DefaultCellStyle = dataGridViewCellStyle2;
-            this.BookingID.HeaderText = "ID";
-            this.BookingID.Name = "BookingID";
-            this.BookingID.ReadOnly = true;
-            this.BookingID.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // bookingEmailDataGridViewTextBoxColumn
-            // 
-            this.bookingEmailDataGridViewTextBoxColumn.DataPropertyName = "BookingEmail";
-            this.bookingEmailDataGridViewTextBoxColumn.HeaderText = "Booking Email";
-            this.bookingEmailDataGridViewTextBoxColumn.Name = "bookingEmailDataGridViewTextBoxColumn";
-            this.bookingEmailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookingEmailDataGridViewTextBoxColumn.Width = 230;
-            // 
-            // movieDataGridViewTextBoxColumn
-            // 
-            this.movieDataGridViewTextBoxColumn.DataPropertyName = "Movie";
-            this.movieDataGridViewTextBoxColumn.HeaderText = "Movie";
-            this.movieDataGridViewTextBoxColumn.Name = "movieDataGridViewTextBoxColumn";
-            this.movieDataGridViewTextBoxColumn.ReadOnly = true;
-            this.movieDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // movieTimeDataGridViewTextBoxColumn
-            // 
-            this.movieTimeDataGridViewTextBoxColumn.DataPropertyName = "MovieTime";
-            dataGridViewCellStyle4.Format = "t";
-            dataGridViewCellStyle4.NullValue = null;
-            this.movieTimeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.movieTimeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.movieTimeDataGridViewTextBoxColumn.Name = "movieTimeDataGridViewTextBoxColumn";
-            this.movieTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.movieTimeDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // ticketPriceDataGridViewTextBoxColumn
-            // 
-            this.ticketPriceDataGridViewTextBoxColumn.DataPropertyName = "TicketPrice";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.ticketPriceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ticketPriceDataGridViewTextBoxColumn.HeaderText = "Ticket Price";
-            this.ticketPriceDataGridViewTextBoxColumn.Name = "ticketPriceDataGridViewTextBoxColumn";
-            this.ticketPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ticketPriceDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // paymentTypeDataGridViewTextBoxColumn
-            // 
-            this.paymentTypeDataGridViewTextBoxColumn.DataPropertyName = "PaymentType";
-            this.paymentTypeDataGridViewTextBoxColumn.HeaderText = "Payment Type";
-            this.paymentTypeDataGridViewTextBoxColumn.Name = "paymentTypeDataGridViewTextBoxColumn";
-            this.paymentTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.paymentTypeDataGridViewTextBoxColumn.Width = 160;
             // 
             // ViewBookings
             // 

@@ -25,7 +25,6 @@ namespace BookingApplication
         }
 
         //Variables to allow me to pass data to the edit form 
-
         public static string UsersName = "";
         public static string BookingEmail = "";
         public static string MovieName = "";
@@ -66,10 +65,11 @@ namespace BookingApplication
                     DataTable dt = new DataTable(); // creates a datatable and Stores the data in dt 
                     SqlDataAdapter da = new SqlDataAdapter(cmd); // Retrieves the data from the cmd command
                     da.Fill(dt); // Fills the da variable with the contents from the dt variable
-                    if(dt.Rows.Count > 0)
+
+                    if(dt.Rows.Count > 0) //Checks if there is any rows in the data table
                     {
-                        lblNoRecords.Hide();
-                        iconbtnEdit.Visible = true;
+                        lblNoRecords.Hide(); // Hides the NoRecords label
+                        iconbtnEdit.Visible = true; // Sets the pen icon to be visible
                         dataGridView1.DataSource = dt; // Sets the data grid to hold the data from the dt variable
                         con.Close(); // Closes the connection
                     }
