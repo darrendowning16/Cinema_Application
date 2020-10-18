@@ -35,6 +35,8 @@ namespace BookingApplication
         double total, feeTotal;
         //double Fee3 = 0.03, Fee5 = 0.05;
 
+        public static int Under4Tickets, ChildTickets, TeenTickets, AdultTickets, SeniorTickets;
+
         public Booking()
         {
             InitializeComponent();
@@ -415,7 +417,8 @@ namespace BookingApplication
                                     if (result == DialogResult.Yes)
                                     {
                                         con.Open(); // Opens the connection
-                                        cmd = new SqlCommand("insert into dbo.Bookings(Name, BookingEmail, Movie, MovieTime, TicketPrice, PaymentType, Email) values(@Name, @BookingEmail, @Movie, @MovieTime, @TicketPrice, @PaymentType, @Email)", con);
+                                        cmd = new SqlCommand("insert into dbo.Bookings(Name, BookingEmail, Movie, MovieTime, TicketPrice, PaymentType, Email, Under4Tickets, ChildTickets, TeenTickets, AdultTickets, SeniorTickets) " +
+                                            "values(@Name, @BookingEmail, @Movie, @MovieTime, @TicketPrice, @PaymentType, @Email, @Under4Tickets, @ChildTickets, @TeenTickets, @AdultTickets, @SeniorTickets)", con);
                                         cmd.Parameters.AddWithValue("@BookingID", ID); // Stores the ID collected from the command to the @ID variable
                                         cmd.Parameters.AddWithValue("@Name", txtBoxPaymentName.Text);
                                         cmd.Parameters.AddWithValue("@BookingEmail", txtBoxPPEmail.Text);
@@ -424,6 +427,11 @@ namespace BookingApplication
                                         cmd.Parameters.AddWithValue("@TicketPrice", lblFinalPriceDisplay.Text);
                                         cmd.Parameters.AddWithValue("@PaymentType", rdoBtnCC.Text);
                                         cmd.Parameters.AddWithValue("@Email", Login.Email);
+                                        cmd.Parameters.AddWithValue("@Under4Tickets", comboBoxUnder4.SelectedItem);
+                                        cmd.Parameters.AddWithValue("@ChildTickets", comboBoxChild.SelectedItem);
+                                        cmd.Parameters.AddWithValue("@TeenTickets", comboBoxTeen.SelectedItem);
+                                        cmd.Parameters.AddWithValue("@AdultTickets", comboBoxAdult.SelectedItem);
+                                        cmd.Parameters.AddWithValue("@SeniorTickets", comboBoxSenior.SelectedItem);
 
                                         cmd.ExecuteNonQuery(); // Executes the query (Non query is for UPDATE, INSERT AND DELETE statements)
 
@@ -496,7 +504,8 @@ namespace BookingApplication
                         if (result == DialogResult.Yes)
                         {
                             con.Open(); // Opens the connection
-                            cmd = new SqlCommand("insert into dbo.Bookings(Name, BookingEmail, Movie, MovieTime, TicketPrice, PaymentType, Email) values(@Name, @BookingEmail, @Movie, @MovieTime, @TicketPrice, @PaymentType, @Email)", con);
+                            cmd = new SqlCommand("insert into dbo.Bookings(Name, BookingEmail, Movie, MovieTime, TicketPrice, PaymentType, Email, Under4Tickets, ChildTickets, TeenTickets, AdultTickets, SeniorTickets) " +
+                                "values(@Name, @BookingEmail, @Movie, @MovieTime, @TicketPrice, @PaymentType, @Email, @Under4Tickets, @ChildTickets, @TeenTickets, @AdultTickets, @SeniorTickets)", con);
                             cmd.Parameters.AddWithValue("@BookingID", ID); // Stores the ID collected from the command to the @ID variable
                             cmd.Parameters.AddWithValue("@Name", txtBoxPaymentName.Text);
                             cmd.Parameters.AddWithValue("@BookingEmail", txtBoxPPEmail.Text);
@@ -505,6 +514,11 @@ namespace BookingApplication
                             cmd.Parameters.AddWithValue("@TicketPrice", lblFinalPriceDisplay.Text);
                             cmd.Parameters.AddWithValue("@PaymentType", rdoBtnPP.Text);
                             cmd.Parameters.AddWithValue("@Email", Login.Email);
+                            cmd.Parameters.AddWithValue("@Under4Tickets", comboBoxUnder4.SelectedItem);
+                            cmd.Parameters.AddWithValue("@ChildTickets", comboBoxChild.SelectedItem);
+                            cmd.Parameters.AddWithValue("@TeenTickets", comboBoxTeen.SelectedItem);
+                            cmd.Parameters.AddWithValue("@AdultTickets", comboBoxAdult.SelectedItem);
+                            cmd.Parameters.AddWithValue("@SeniorTickets", comboBoxSenior.SelectedItem);
 
                             cmd.ExecuteNonQuery(); // Executes the query (Non query is for UPDATE, INSERT AND DELETE statements)
 
