@@ -1141,7 +1141,7 @@
             this.txtBoxExpiryDateYY.SelectionStart = 0;
             this.txtBoxExpiryDateYY.ShortcutsEnabled = true;
             this.txtBoxExpiryDateYY.Size = new System.Drawing.Size(46, 23);
-            this.txtBoxExpiryDateYY.TabIndex = 52;
+            this.txtBoxExpiryDateYY.TabIndex = 5;
             this.txtBoxExpiryDateYY.UseSelectable = true;
             this.txtBoxExpiryDateYY.WaterMark = "YY";
             this.txtBoxExpiryDateYY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -1323,7 +1323,7 @@
             this.txtBoxCVV.SelectionStart = 0;
             this.txtBoxCVV.ShortcutsEnabled = true;
             this.txtBoxCVV.Size = new System.Drawing.Size(46, 23);
-            this.txtBoxCVV.TabIndex = 5;
+            this.txtBoxCVV.TabIndex = 6;
             this.txtBoxCVV.UseSelectable = true;
             this.txtBoxCVV.WaterMark = "000";
             this.txtBoxCVV.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -1387,7 +1387,7 @@
             this.txtBoxCardNumber.SelectionStart = 0;
             this.txtBoxCardNumber.ShortcutsEnabled = true;
             this.txtBoxCardNumber.Size = new System.Drawing.Size(155, 23);
-            this.txtBoxCardNumber.TabIndex = 38;
+            this.txtBoxCardNumber.TabIndex = 3;
             this.txtBoxCardNumber.UseSelectable = true;
             this.txtBoxCardNumber.WaterMark = "Enter Card Number";
             this.txtBoxCardNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
