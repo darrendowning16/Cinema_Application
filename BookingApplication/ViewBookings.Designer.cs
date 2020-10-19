@@ -30,24 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.movieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.movieTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookingApplicationDataSet = new BookingApplication.BookingApplicationDataSet();
-            this.bookingsTableAdapter = new BookingApplication.BookingApplicationDataSetTableAdapters.BookingsTableAdapter();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblSignInEmail = new System.Windows.Forms.Label();
             this.txtSignInEmail = new MetroFramework.Controls.MetroTextBox();
             this.txtboxBookingEmail = new MetroFramework.Controls.MetroTextBox();
@@ -59,165 +54,28 @@
             this.iconbtnEdit = new FontAwesome.Sharp.IconButton();
             this.icnbtnHome = new FontAwesome.Sharp.IconButton();
             this.lblNoRecords = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingApplicationDataSet)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bookingApplicationDataSet = new BookingApplication.BookingApplicationDataSet();
+            this.bookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookingsTableAdapter = new BookingApplication.BookingApplicationDataSetTableAdapters.BookingsTableAdapter();
+            this.bookingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movieTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.under4TicketsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.childTicketsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teenTicketsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adultTicketsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seniorTicketsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingApplicationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Format = "t";
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 50;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BookingID,
-            this.nameDataGridViewTextBoxColumn,
-            this.bookingEmailDataGridViewTextBoxColumn,
-            this.movieDataGridViewTextBoxColumn,
-            this.movieTimeDataGridViewTextBoxColumn,
-            this.ticketPriceDataGridViewTextBoxColumn,
-            this.paymentTypeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bookingsBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.Format = "t";
-            dataGridViewCellStyle6.NullValue = null;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.Maroon;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.Format = "t";
-            dataGridViewCellStyle7.NullValue = null;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 50;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowTemplate.DividerHeight = 1;
-            this.dataGridView1.RowTemplate.Height = 50;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1090, 370);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // BookingID
-            // 
-            this.BookingID.DataPropertyName = "BookingID";
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = null;
-            this.BookingID.DefaultCellStyle = dataGridViewCellStyle2;
-            this.BookingID.HeaderText = "ID";
-            this.BookingID.Name = "BookingID";
-            this.BookingID.ReadOnly = true;
-            this.BookingID.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // bookingEmailDataGridViewTextBoxColumn
-            // 
-            this.bookingEmailDataGridViewTextBoxColumn.DataPropertyName = "BookingEmail";
-            this.bookingEmailDataGridViewTextBoxColumn.HeaderText = "Booking Email";
-            this.bookingEmailDataGridViewTextBoxColumn.Name = "bookingEmailDataGridViewTextBoxColumn";
-            this.bookingEmailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookingEmailDataGridViewTextBoxColumn.Width = 230;
-            // 
-            // movieDataGridViewTextBoxColumn
-            // 
-            this.movieDataGridViewTextBoxColumn.DataPropertyName = "Movie";
-            this.movieDataGridViewTextBoxColumn.HeaderText = "Movie";
-            this.movieDataGridViewTextBoxColumn.Name = "movieDataGridViewTextBoxColumn";
-            this.movieDataGridViewTextBoxColumn.ReadOnly = true;
-            this.movieDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // movieTimeDataGridViewTextBoxColumn
-            // 
-            this.movieTimeDataGridViewTextBoxColumn.DataPropertyName = "MovieTime";
-            dataGridViewCellStyle4.Format = "t";
-            dataGridViewCellStyle4.NullValue = null;
-            this.movieTimeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.movieTimeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.movieTimeDataGridViewTextBoxColumn.Name = "movieTimeDataGridViewTextBoxColumn";
-            this.movieTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.movieTimeDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // ticketPriceDataGridViewTextBoxColumn
-            // 
-            this.ticketPriceDataGridViewTextBoxColumn.DataPropertyName = "TicketPrice";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.ticketPriceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ticketPriceDataGridViewTextBoxColumn.HeaderText = "Ticket Price";
-            this.ticketPriceDataGridViewTextBoxColumn.Name = "ticketPriceDataGridViewTextBoxColumn";
-            this.ticketPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ticketPriceDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // paymentTypeDataGridViewTextBoxColumn
-            // 
-            this.paymentTypeDataGridViewTextBoxColumn.DataPropertyName = "PaymentType";
-            this.paymentTypeDataGridViewTextBoxColumn.HeaderText = "Payment Type";
-            this.paymentTypeDataGridViewTextBoxColumn.Name = "paymentTypeDataGridViewTextBoxColumn";
-            this.paymentTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.paymentTypeDataGridViewTextBoxColumn.Width = 160;
-            // 
-            // bookingsBindingSource
-            // 
-            this.bookingsBindingSource.DataMember = "Bookings";
-            this.bookingsBindingSource.DataSource = this.bookingApplicationDataSet;
-            // 
-            // bookingApplicationDataSet
-            // 
-            this.bookingApplicationDataSet.DataSetName = "BookingApplicationDataSet";
-            this.bookingApplicationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bookingsTableAdapter
-            // 
-            this.bookingsTableAdapter.ClearBeforeFill = true;
             // 
             // lblSignInEmail
             // 
@@ -314,6 +172,7 @@
             this.btnSearchEmail.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSearchEmail.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnSearchEmail.IconColor = System.Drawing.Color.Black;
+            this.btnSearchEmail.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearchEmail.IconSize = 20;
             this.btnSearchEmail.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSearchEmail.Location = new System.Drawing.Point(535, 33);
@@ -336,6 +195,7 @@
             this.IconbtnLogOut.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.IconbtnLogOut.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.IconbtnLogOut.IconColor = System.Drawing.Color.Black;
+            this.IconbtnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconbtnLogOut.IconSize = 40;
             this.IconbtnLogOut.Location = new System.Drawing.Point(982, 30);
             this.IconbtnLogOut.Name = "IconbtnLogOut";
@@ -356,6 +216,7 @@
             this.IconbtnExitBooking.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.IconbtnExitBooking.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
             this.IconbtnExitBooking.IconColor = System.Drawing.Color.Black;
+            this.IconbtnExitBooking.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconbtnExitBooking.IconSize = 40;
             this.IconbtnExitBooking.Location = new System.Drawing.Point(1035, 26);
             this.IconbtnExitBooking.Name = "IconbtnExitBooking";
@@ -405,6 +266,7 @@
             this.iconbtnEdit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconbtnEdit.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.iconbtnEdit.IconColor = System.Drawing.Color.Black;
+            this.iconbtnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconbtnEdit.IconSize = 40;
             this.iconbtnEdit.Location = new System.Drawing.Point(866, 31);
             this.iconbtnEdit.Name = "iconbtnEdit";
@@ -425,6 +287,7 @@
             this.icnbtnHome.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.icnbtnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.icnbtnHome.IconColor = System.Drawing.Color.Black;
+            this.icnbtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icnbtnHome.IconSize = 40;
             this.icnbtnHome.Location = new System.Drawing.Point(923, 30);
             this.icnbtnHome.Name = "icnbtnHome";
@@ -444,6 +307,212 @@
             this.lblNoRecords.Text = "No Bookings Found!";
             this.lblNoRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Format = "t";
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 50;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookingIDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.bookingEmailDataGridViewTextBoxColumn,
+            this.movieDataGridViewTextBoxColumn,
+            this.movieTimeDataGridViewTextBoxColumn,
+            this.ticketPriceDataGridViewTextBoxColumn,
+            this.paymentTypeDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.under4TicketsDataGridViewTextBoxColumn,
+            this.childTicketsDataGridViewTextBoxColumn,
+            this.teenTicketsDataGridViewTextBoxColumn,
+            this.adultTicketsDataGridViewTextBoxColumn,
+            this.seniorTicketsDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bookingsBindingSource;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 50;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowTemplate.DividerHeight = 1;
+            this.dataGridView1.RowTemplate.Height = 50;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1090, 370);
+            this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged_1);
+            // 
+            // bookingApplicationDataSet
+            // 
+            this.bookingApplicationDataSet.DataSetName = "BookingApplicationDataSet";
+            this.bookingApplicationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookingsBindingSource
+            // 
+            this.bookingsBindingSource.DataMember = "Bookings";
+            this.bookingsBindingSource.DataSource = this.bookingApplicationDataSet;
+            // 
+            // bookingsTableAdapter
+            // 
+            this.bookingsTableAdapter.ClearBeforeFill = true;
+            // 
+            // bookingIDDataGridViewTextBoxColumn
+            // 
+            this.bookingIDDataGridViewTextBoxColumn.DataPropertyName = "BookingID";
+            this.bookingIDDataGridViewTextBoxColumn.HeaderText = "BookingID";
+            this.bookingIDDataGridViewTextBoxColumn.Name = "bookingIDDataGridViewTextBoxColumn";
+            this.bookingIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookingIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // bookingEmailDataGridViewTextBoxColumn
+            // 
+            this.bookingEmailDataGridViewTextBoxColumn.DataPropertyName = "BookingEmail";
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.bookingEmailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.bookingEmailDataGridViewTextBoxColumn.HeaderText = "Booking Email";
+            this.bookingEmailDataGridViewTextBoxColumn.Name = "bookingEmailDataGridViewTextBoxColumn";
+            this.bookingEmailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookingEmailDataGridViewTextBoxColumn.Width = 230;
+            // 
+            // movieDataGridViewTextBoxColumn
+            // 
+            this.movieDataGridViewTextBoxColumn.DataPropertyName = "Movie";
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.movieDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.movieDataGridViewTextBoxColumn.HeaderText = "Movie";
+            this.movieDataGridViewTextBoxColumn.Name = "movieDataGridViewTextBoxColumn";
+            this.movieDataGridViewTextBoxColumn.ReadOnly = true;
+            this.movieDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // movieTimeDataGridViewTextBoxColumn
+            // 
+            this.movieTimeDataGridViewTextBoxColumn.DataPropertyName = "MovieTime";
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.movieTimeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.movieTimeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.movieTimeDataGridViewTextBoxColumn.Name = "movieTimeDataGridViewTextBoxColumn";
+            this.movieTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.movieTimeDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // ticketPriceDataGridViewTextBoxColumn
+            // 
+            this.ticketPriceDataGridViewTextBoxColumn.DataPropertyName = "TicketPrice";
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.ticketPriceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ticketPriceDataGridViewTextBoxColumn.HeaderText = "Ticket Price";
+            this.ticketPriceDataGridViewTextBoxColumn.Name = "ticketPriceDataGridViewTextBoxColumn";
+            this.ticketPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ticketPriceDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // paymentTypeDataGridViewTextBoxColumn
+            // 
+            this.paymentTypeDataGridViewTextBoxColumn.DataPropertyName = "PaymentType";
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.paymentTypeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.paymentTypeDataGridViewTextBoxColumn.HeaderText = "Payment Type";
+            this.paymentTypeDataGridViewTextBoxColumn.Name = "paymentTypeDataGridViewTextBoxColumn";
+            this.paymentTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.paymentTypeDataGridViewTextBoxColumn.Width = 160;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // under4TicketsDataGridViewTextBoxColumn
+            // 
+            this.under4TicketsDataGridViewTextBoxColumn.DataPropertyName = "Under4Tickets";
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.under4TicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.under4TicketsDataGridViewTextBoxColumn.HeaderText = "Under4\'s Tickets";
+            this.under4TicketsDataGridViewTextBoxColumn.Name = "under4TicketsDataGridViewTextBoxColumn";
+            this.under4TicketsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // childTicketsDataGridViewTextBoxColumn
+            // 
+            this.childTicketsDataGridViewTextBoxColumn.DataPropertyName = "ChildTickets";
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.childTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.childTicketsDataGridViewTextBoxColumn.HeaderText = "Child Tickets";
+            this.childTicketsDataGridViewTextBoxColumn.Name = "childTicketsDataGridViewTextBoxColumn";
+            this.childTicketsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.childTicketsDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // teenTicketsDataGridViewTextBoxColumn
+            // 
+            this.teenTicketsDataGridViewTextBoxColumn.DataPropertyName = "TeenTickets";
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.teenTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.teenTicketsDataGridViewTextBoxColumn.HeaderText = "Teen Tickets";
+            this.teenTicketsDataGridViewTextBoxColumn.Name = "teenTicketsDataGridViewTextBoxColumn";
+            this.teenTicketsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.teenTicketsDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // adultTicketsDataGridViewTextBoxColumn
+            // 
+            this.adultTicketsDataGridViewTextBoxColumn.DataPropertyName = "AdultTickets";
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.adultTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            this.adultTicketsDataGridViewTextBoxColumn.HeaderText = "Adult Tickets";
+            this.adultTicketsDataGridViewTextBoxColumn.Name = "adultTicketsDataGridViewTextBoxColumn";
+            this.adultTicketsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adultTicketsDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // seniorTicketsDataGridViewTextBoxColumn
+            // 
+            this.seniorTicketsDataGridViewTextBoxColumn.DataPropertyName = "SeniorTickets";
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.seniorTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            this.seniorTicketsDataGridViewTextBoxColumn.HeaderText = "Senior Tickets";
+            this.seniorTicketsDataGridViewTextBoxColumn.Name = "seniorTicketsDataGridViewTextBoxColumn";
+            this.seniorTicketsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.seniorTicketsDataGridViewTextBoxColumn.Width = 150;
+            // 
             // ViewBookings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,20 +526,15 @@
             this.Name = "ViewBookings";
             this.Text = "ViewBookings";
             this.Load += new System.EventHandler(this.ViewBookings_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingApplicationDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingApplicationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private BookingApplicationDataSet bookingApplicationDataSet;
-        private System.Windows.Forms.BindingSource bookingsBindingSource;
-        private BookingApplicationDataSetTableAdapters.BookingsTableAdapter bookingsTableAdapter;
         private System.Windows.Forms.Label lblSignInEmail;
         private MetroFramework.Controls.MetroTextBox txtSignInEmail;
         private MetroFramework.Controls.MetroTextBox txtboxBookingEmail;
@@ -482,12 +546,22 @@
         private FontAwesome.Sharp.IconButton icnbtnHome;
         private FontAwesome.Sharp.IconButton iconbtnEdit;
         private System.Windows.Forms.Label lblBookingEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookingID;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private BookingApplicationDataSet bookingApplicationDataSet;
+        private System.Windows.Forms.BindingSource bookingsBindingSource;
+        private BookingApplicationDataSetTableAdapters.BookingsTableAdapter bookingsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookingIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookingEmailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn movieDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn movieTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn under4TicketsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn childTicketsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teenTicketsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adultTicketsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn seniorTicketsDataGridViewTextBoxColumn;
     }
 }

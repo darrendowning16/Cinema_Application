@@ -423,7 +423,7 @@ namespace BookingApplication
                                         cmd.Parameters.AddWithValue("@Name", txtBoxPaymentName.Text);
                                         cmd.Parameters.AddWithValue("@BookingEmail", txtBoxPPEmail.Text);
                                         cmd.Parameters.AddWithValue("@Movie", comboBoxMovieNames.SelectedItem); // Stores the Password collected from the command to the @Password variable
-                                        cmd.Parameters.AddWithValue("@MovieTime", lblMovieTime.Text);
+                                        cmd.Parameters.AddWithValue("@MovieTime", comboBoxMovieTimes.SelectedItem);
                                         cmd.Parameters.AddWithValue("@TicketPrice", lblFinalPriceDisplay.Text);
                                         cmd.Parameters.AddWithValue("@PaymentType", rdoBtnCC.Text);
                                         cmd.Parameters.AddWithValue("@Email", Login.Email);
@@ -510,7 +510,7 @@ namespace BookingApplication
                             cmd.Parameters.AddWithValue("@Name", txtBoxPaymentName.Text);
                             cmd.Parameters.AddWithValue("@BookingEmail", txtBoxPPEmail.Text);
                             cmd.Parameters.AddWithValue("@Movie", comboBoxMovieNames.SelectedItem); // Stores the Password collected from the command to the @Password variable
-                            cmd.Parameters.AddWithValue("@MovieTime", lblMovieTime.Text);
+                            cmd.Parameters.AddWithValue("@MovieTime", comboBoxMovieTimes.SelectedItem);
                             cmd.Parameters.AddWithValue("@TicketPrice", lblFinalPriceDisplay.Text);
                             cmd.Parameters.AddWithValue("@PaymentType", rdoBtnPP.Text);
                             cmd.Parameters.AddWithValue("@Email", Login.Email);

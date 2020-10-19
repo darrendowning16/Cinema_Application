@@ -35,12 +35,12 @@ namespace BookingApplication
             comboBoxEditMovieNames.SelectedItem = ViewBookings.MovieName;
             comboBoxEditMovieTimes.SelectedItem = ViewBookings.MovieTime;
             txtBoxEditPaymentType.Text = ViewBookings.PaymentType;
-            comboBoxEditUnder4.SelectedIndex = 0;
-            comboBoxEditChild.SelectedIndex = 0;
-            comboBoxEditTeen.SelectedIndex = 0;
-            comboBoxEditSenior.SelectedIndex = 0;
-            comboBoxEditAdult.SelectedIndex = 0;
-            lblEditFinalPrice.Text = "0";
+            comboBoxEditUnder4.SelectedItem = ViewBookings.Under4sEditTickets;
+            comboBoxEditChild.SelectedItem = ViewBookings.ChildEditTickets;
+            comboBoxEditTeen.SelectedItem = ViewBookings.TeenEditTickets;
+            comboBoxEditSenior.SelectedItem = ViewBookings.SeniorEditTickets;
+            comboBoxEditAdult.SelectedItem = ViewBookings.AdultEditTickets;
+            //lblEditFinalPrice.Text = "0";
         }
 
         private void icnbtnEditHome_Click(object sender, EventArgs e)
@@ -64,6 +64,11 @@ namespace BookingApplication
                 comboBoxEditMovieNames.SelectedItem = ViewBookings.MovieName;
                 comboBoxEditMovieTimes.SelectedItem = ViewBookings.MovieTime;
                 txtBoxEditPaymentType.Text = ViewBookings.PaymentType;
+                comboBoxEditUnder4.SelectedItem = ViewBookings.Under4sEditTickets;
+                comboBoxEditChild.SelectedItem = ViewBookings.ChildEditTickets;
+                comboBoxEditTeen.SelectedItem = ViewBookings.TeenEditTickets;
+                comboBoxEditSenior.SelectedItem = ViewBookings.SeniorEditTickets;
+                comboBoxEditAdult.SelectedItem = ViewBookings.AdultEditTickets;
             }
                 
         }
@@ -135,8 +140,8 @@ namespace BookingApplication
                 {
                     if(editTotal > total)
                     {
-                        string UpdatePayment = "Original Price: £" + total.ToString() + Environment.NewLine + "New Payment: £" + editTotal.ToString()
-                        + Environment.NewLine + Environment.NewLine + "Remaining Cost to be paid: £" + (editTotal - total) 
+                        string UpdatePayment = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + editTotal.ToString("F")
+                        + Environment.NewLine + Environment.NewLine + "Remaining Cost to be paid: £" + (editTotal - total).ToString("F") 
                         + Environment.NewLine + Environment.NewLine + "Confirm?";
                         string captionUpdatePayment = "Payment";
 
@@ -189,8 +194,8 @@ namespace BookingApplication
                     }
                     if (total > editTotal)
                     {
-                        string UpdatePaymentplus = "Original Price: £" + total.ToString() + Environment.NewLine + "New Payment: £" + editTotal.ToString()
-                            + Environment.NewLine + Environment.NewLine + "You will be refunded: £" + (total - editTotal)
+                        string UpdatePaymentplus = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + editTotal.ToString("F")
+                            + Environment.NewLine + Environment.NewLine + "You will be refunded: £" + (total - editTotal).ToString("F")
                             + Environment.NewLine + Environment.NewLine + "Confirm?";
                         string captionUpdatePaymentplus = "Confirm?";
 
@@ -255,9 +260,18 @@ namespace BookingApplication
 
         private void price()
         {
-            editTotal = Convert.ToInt32((under4 + child + teen + adult + senior));
+            if(txtBoxEditPaymentType.Text == "Credit Card")
+            {
+                editTotal = Convert.ToInt32((under4 + child + teen + adult + senior));
 
-            lblEditFinalPrice.Text = "£" + editTotal.ToString();
+                lblEditFinalPrice.Text = "£" + (editTotal + editTotal * 0.05 ).ToString("F");
+            }
+            else
+            {
+                editTotal = Convert.ToInt32((under4 + child + teen + adult + senior));
+
+                lblEditFinalPrice.Text = "£" + (editTotal + editTotal * 0.03).ToString("F");
+            }
         }
     }
 }

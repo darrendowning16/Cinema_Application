@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.icnbtnHome = new FontAwesome.Sharp.IconButton();
             this.IconbtnLogOut = new FontAwesome.Sharp.IconButton();
             this.IconbtnExitBooking = new FontAwesome.Sharp.IconButton();
             this.lblBookATicket = new System.Windows.Forms.Label();
@@ -119,7 +120,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnPaymentConfirm = new FontAwesome.Sharp.IconButton();
             this.toolTipBookingMovie = new System.Windows.Forms.ToolTip(this.components);
-            this.icnbtnHome = new FontAwesome.Sharp.IconButton();
             this.panelTop.SuspendLayout();
             this.tabControlBooking.SuspendLayout();
             this.tabPageMovies.SuspendLayout();
@@ -144,6 +144,27 @@
             this.panelTop.Size = new System.Drawing.Size(604, 58);
             this.panelTop.TabIndex = 0;
             // 
+            // icnbtnHome
+            // 
+            this.icnbtnHome.BackColor = System.Drawing.Color.Transparent;
+            this.icnbtnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icnbtnHome.FlatAppearance.BorderSize = 0;
+            this.icnbtnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.icnbtnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.icnbtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icnbtnHome.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.icnbtnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.icnbtnHome.IconColor = System.Drawing.Color.Black;
+            this.icnbtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icnbtnHome.IconSize = 40;
+            this.icnbtnHome.Location = new System.Drawing.Point(440, 15);
+            this.icnbtnHome.Name = "icnbtnHome";
+            this.icnbtnHome.Rotation = 0D;
+            this.icnbtnHome.Size = new System.Drawing.Size(50, 34);
+            this.icnbtnHome.TabIndex = 13;
+            this.icnbtnHome.UseVisualStyleBackColor = false;
+            this.icnbtnHome.Click += new System.EventHandler(this.icnbtnHome_Click);
+            // 
             // IconbtnLogOut
             // 
             this.IconbtnLogOut.BackColor = System.Drawing.Color.Transparent;
@@ -155,6 +176,7 @@
             this.IconbtnLogOut.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.IconbtnLogOut.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.IconbtnLogOut.IconColor = System.Drawing.Color.Black;
+            this.IconbtnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconbtnLogOut.IconSize = 40;
             this.IconbtnLogOut.Location = new System.Drawing.Point(496, 15);
             this.IconbtnLogOut.Name = "IconbtnLogOut";
@@ -177,6 +199,7 @@
             this.IconbtnExitBooking.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.IconbtnExitBooking.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
             this.IconbtnExitBooking.IconColor = System.Drawing.Color.Black;
+            this.IconbtnExitBooking.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconbtnExitBooking.IconSize = 40;
             this.IconbtnExitBooking.Location = new System.Drawing.Point(547, 12);
             this.IconbtnExitBooking.Name = "IconbtnExitBooking";
@@ -211,7 +234,7 @@
             this.tabControlBooking.Location = new System.Drawing.Point(0, 58);
             this.tabControlBooking.Margin = new System.Windows.Forms.Padding(30);
             this.tabControlBooking.Name = "tabControlBooking";
-            this.tabControlBooking.SelectedIndex = 3;
+            this.tabControlBooking.SelectedIndex = 0;
             this.tabControlBooking.Size = new System.Drawing.Size(604, 383);
             this.tabControlBooking.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlBooking.TabIndex = 1;
@@ -254,6 +277,7 @@
             this.iconBtnReset.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconBtnReset.IconChar = FontAwesome.Sharp.IconChar.Undo;
             this.iconBtnReset.IconColor = System.Drawing.Color.Black;
+            this.iconBtnReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnReset.IconSize = 25;
             this.iconBtnReset.Location = new System.Drawing.Point(455, 308);
             this.iconBtnReset.Name = "iconBtnReset";
@@ -276,6 +300,7 @@
             this.iconBtnProceed.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconBtnProceed.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.iconBtnProceed.IconColor = System.Drawing.Color.Black;
+            this.iconBtnProceed.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnProceed.IconSize = 25;
             this.iconBtnProceed.Location = new System.Drawing.Point(520, 308);
             this.iconBtnProceed.Name = "iconBtnProceed";
@@ -324,12 +349,12 @@
             this.comboBoxMovieTimes.ForeColor = System.Drawing.Color.White;
             this.comboBoxMovieTimes.FormattingEnabled = true;
             this.comboBoxMovieTimes.Items.AddRange(new object[] {
-            "12:00",
-            "13:45",
-            "15:30",
-            "17.20",
-            "19:45",
-            "22:00"});
+            "12:00:00",
+            "13:45:00",
+            "15:30:00",
+            "17.20:00",
+            "19:45:00",
+            "22:00:00"});
             this.comboBoxMovieTimes.Location = new System.Drawing.Point(246, 33);
             this.comboBoxMovieTimes.Name = "comboBoxMovieTimes";
             this.comboBoxMovieTimes.Size = new System.Drawing.Size(104, 26);
@@ -666,6 +691,7 @@
             this.iconBtnTicketsBack.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconBtnTicketsBack.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             this.iconBtnTicketsBack.IconColor = System.Drawing.Color.Black;
+            this.iconBtnTicketsBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnTicketsBack.IconSize = 25;
             this.iconBtnTicketsBack.Location = new System.Drawing.Point(390, 308);
             this.iconBtnTicketsBack.Margin = new System.Windows.Forms.Padding(2, 7, 0, 0);
@@ -689,6 +715,7 @@
             this.iconBtnRefresh.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconBtnRefresh.IconChar = FontAwesome.Sharp.IconChar.Undo;
             this.iconBtnRefresh.IconColor = System.Drawing.Color.Black;
+            this.iconBtnRefresh.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnRefresh.IconSize = 25;
             this.iconBtnRefresh.Location = new System.Drawing.Point(455, 308);
             this.iconBtnRefresh.Margin = new System.Windows.Forms.Padding(2, 7, 0, 0);
@@ -721,6 +748,7 @@
             this.iconBtnTicketsProceed.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconBtnTicketsProceed.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.iconBtnTicketsProceed.IconColor = System.Drawing.Color.Black;
+            this.iconBtnTicketsProceed.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnTicketsProceed.IconSize = 25;
             this.iconBtnTicketsProceed.Location = new System.Drawing.Point(520, 308);
             this.iconBtnTicketsProceed.Margin = new System.Windows.Forms.Padding(2, 7, 0, 0);
@@ -996,6 +1024,7 @@
             this.iconBtnConfirmationBack.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconBtnConfirmationBack.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             this.iconBtnConfirmationBack.IconColor = System.Drawing.Color.Black;
+            this.iconBtnConfirmationBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnConfirmationBack.IconSize = 25;
             this.iconBtnConfirmationBack.Location = new System.Drawing.Point(462, 308);
             this.iconBtnConfirmationBack.Name = "iconBtnConfirmationBack";
@@ -1018,6 +1047,7 @@
             this.iconBtnConfirmationProceed.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconBtnConfirmationProceed.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.iconBtnConfirmationProceed.IconColor = System.Drawing.Color.Black;
+            this.iconBtnConfirmationProceed.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnConfirmationProceed.IconSize = 25;
             this.iconBtnConfirmationProceed.Location = new System.Drawing.Point(530, 308);
             this.iconBtnConfirmationProceed.Name = "iconBtnConfirmationProceed";
@@ -1531,6 +1561,7 @@
             this.btnPaymentConfirm.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnPaymentConfirm.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.btnPaymentConfirm.IconColor = System.Drawing.Color.Black;
+            this.btnPaymentConfirm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPaymentConfirm.IconSize = 30;
             this.btnPaymentConfirm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPaymentConfirm.Location = new System.Drawing.Point(529, 303);
@@ -1541,26 +1572,6 @@
             this.btnPaymentConfirm.TabIndex = 6;
             this.btnPaymentConfirm.UseVisualStyleBackColor = true;
             this.btnPaymentConfirm.Click += new System.EventHandler(this.btnPaymentConfirm_Click);
-            // 
-            // icnbtnHome
-            // 
-            this.icnbtnHome.BackColor = System.Drawing.Color.Transparent;
-            this.icnbtnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.icnbtnHome.FlatAppearance.BorderSize = 0;
-            this.icnbtnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.icnbtnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.icnbtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icnbtnHome.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.icnbtnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.icnbtnHome.IconColor = System.Drawing.Color.Black;
-            this.icnbtnHome.IconSize = 40;
-            this.icnbtnHome.Location = new System.Drawing.Point(440, 15);
-            this.icnbtnHome.Name = "icnbtnHome";
-            this.icnbtnHome.Rotation = 0D;
-            this.icnbtnHome.Size = new System.Drawing.Size(50, 34);
-            this.icnbtnHome.TabIndex = 13;
-            this.icnbtnHome.UseVisualStyleBackColor = false;
-            this.icnbtnHome.Click += new System.EventHandler(this.icnbtnHome_Click);
             // 
             // Booking
             // 

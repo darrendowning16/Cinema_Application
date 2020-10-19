@@ -32,12 +32,10 @@ namespace BookingApplication
         public static string TicketPrice = "";
         public static string PaymentType = "";
         public static string BookID = "";
+        public static string Under4sEditTickets, ChildEditTickets, TeenEditTickets, AdultEditTickets, SeniorEditTickets;
 
         private void ViewBookings_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bookingApplicationDataSet.Bookings' table. You can move, or remove it, as needed.
-            //this.bookingsTableAdapter.Fill(this.bookingApplicationDataSet.Bookings);
-
             txtSignInEmail.Text = Login.Email;
             iconbtnEdit.Visible = false;
         }
@@ -121,8 +119,15 @@ namespace BookingApplication
             menu.ShowDialog();//opens the form
             this.Close();//closes the form
         }
+        private void iconbtnEdit_Click(object sender, EventArgs e)
+        {
+            EditBooking EditBooking = new EditBooking();//opens a form called EditBooking
+            this.Hide();//hides the previous form
+            EditBooking.ShowDialog();//opens the form
+            this.Close();//closes the form
+        }
 
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        private void dataGridView1_SelectionChanged_1(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
@@ -133,15 +138,12 @@ namespace BookingApplication
                 MovieTime = row.Cells[4].Value.ToString();
                 TicketPrice = row.Cells[5].Value.ToString();
                 PaymentType = row.Cells[6].Value.ToString();
+                Under4sEditTickets = row.Cells[8].Value.ToString();
+                ChildEditTickets = row.Cells[9].Value.ToString();
+                TeenEditTickets = row.Cells[10].Value.ToString();
+                AdultEditTickets = row.Cells[11].Value.ToString();
+                SeniorEditTickets = row.Cells[12].Value.ToString();
             }
-        }
-
-        private void iconbtnEdit_Click(object sender, EventArgs e)
-        {
-            EditBooking EditBooking = new EditBooking();//opens a form called EditBooking
-            this.Hide();//hides the previous form
-            EditBooking.ShowDialog();//opens the form
-            this.Close();//closes the form
         }
     }
 }
