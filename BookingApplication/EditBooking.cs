@@ -189,7 +189,50 @@ namespace BookingApplication
                         }
                         else
                         {
+                            string UpdatePayment = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + (editTotal + editTotal * 0.03).ToString("F")
+                            + Environment.NewLine + Environment.NewLine + "Remaining Cost to be paid: £" + ((editTotal + editTotal * 0.03) - total).ToString("F")
+                            + Environment.NewLine + Environment.NewLine + "Confirm?";
+                            string captionUpdatePayment = "Payment";
 
+                            var resultUpdatePayment = MessageBox.Show(UpdatePayment, captionUpdatePayment, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                            if (resultUpdatePayment == DialogResult.Yes)
+                            {
+                                con.Open(); // Opens the connection
+                                cmd = new SqlCommand("UPDATE dbo.Bookings SET Name=@Name, BookingEmail=@BookingEmail, Movie=@Movie, MovieTime=@MovieTime, TicketPrice=@TicketPrice, PaymentType=@PaymentType, Email=@Email WHERE BookingID=@BookingID", con);
+                                cmd.Parameters.AddWithValue("@BookingID", BookingID); // Stores the ID collected from the command to the @ID variable
+                                cmd.Parameters.AddWithValue("@Name", txtBoxEditName.Text);
+                                cmd.Parameters.AddWithValue("@BookingEmail", txtBoxEditBookingEmail.Text);
+                                cmd.Parameters.AddWithValue("@Movie", comboBoxEditMovieNames.SelectedItem); // Stores the Password collected from the command to the @Password variable
+                                cmd.Parameters.AddWithValue("@MovieTime", comboBoxEditMovieTimes.SelectedItem);
+                                cmd.Parameters.AddWithValue("@TicketPrice", lblEditFinalPrice.Text);
+                                cmd.Parameters.AddWithValue("@PaymentType", txtBoxEditPaymentType.Text);
+                                cmd.Parameters.AddWithValue("@Email", Login.Email);
+
+                                cmd.ExecuteNonQuery(); // Executes the query (Non query is for UPDATE, INSERT AND DELETE statements)
+                                MessageBox.Show("Booking Updated Successfully");
+                                con.Close();
+
+                                const string LogoutConfirmation = "Would you like to return to the View Booking page to view your Booking?";
+                                const string caption = "View Booking?";
+
+                                var result = MessageBox.Show(LogoutConfirmation, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                                if (result == DialogResult.Yes)
+                                {
+                                    ViewBookings viewBookings = new ViewBookings();//opens a form called Menu
+                                    this.Hide();//hides the previous form
+                                    viewBookings.ShowDialog();//opens the form
+                                    this.Close();//closes the form
+                                }
+                                else
+                                {
+                                    Menu menu = new Menu();//opens a form called Menu
+                                    this.Hide();//hides the previous form
+                                    menu.ShowDialog();//opens the form
+                                    this.Close();//closes the form
+                                }
+                            }
                         }
                     }
                     if (total > editTotal)
@@ -251,7 +294,58 @@ namespace BookingApplication
                         }
                         else
                         {
+                            string UpdatePaymentplus = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + (editTotal + editTotal * 0.03).ToString("F")
+                            + Environment.NewLine + Environment.NewLine + "You will be refunded: £" + (total - (editTotal + editTotal * 0.03)).ToString("F")
+                            + Environment.NewLine + Environment.NewLine + "Confirm?";
+                            string captionUpdatePaymentplus = "Confirm?";
 
+                            var resultUpdatePaymentplus = MessageBox.Show(UpdatePaymentplus, captionUpdatePaymentplus, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+                            if (resultUpdatePaymentplus == DialogResult.Yes)
+                            {
+                                con.Open(); // Opens the connection
+                                cmd = new SqlCommand("UPDATE dbo.Bookings SET Name=@Name, BookingEmail=@BookingEmail, Movie=@Movie, MovieTime=@MovieTime, TicketPrice=@TicketPrice, PaymentType=@PaymentType, Email=@Email WHERE BookingID=@BookingID", con);
+                                cmd.Parameters.AddWithValue("@BookingID", BookingID); // Stores the ID collected from the command to the @ID variable
+                                cmd.Parameters.AddWithValue("@Name", txtBoxEditName.Text);
+                                cmd.Parameters.AddWithValue("@BookingEmail", txtBoxEditBookingEmail.Text);
+                                cmd.Parameters.AddWithValue("@Movie", comboBoxEditMovieNames.SelectedItem); // Stores the Password collected from the command to the @Password variable
+                                cmd.Parameters.AddWithValue("@MovieTime", comboBoxEditMovieTimes.SelectedItem);
+                                cmd.Parameters.AddWithValue("@TicketPrice", lblEditFinalPrice.Text);
+                                cmd.Parameters.AddWithValue("@PaymentType", txtBoxEditPaymentType.Text);
+                                cmd.Parameters.AddWithValue("@Email", Login.Email);
+
+                                cmd.ExecuteNonQuery(); // Executes the query (Non query is for UPDATE, INSERT AND DELETE statements)
+                                MessageBox.Show("Record Updated Successfully");
+                                con.Close();
+
+                                const string LogoutConfirmation = "Would you like to return to the View Booking page to view your Booking?";
+                                const string caption = "View Booking?";
+
+                                var result = MessageBox.Show(LogoutConfirmation, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                                if (result == DialogResult.Yes)
+                                {
+                                    ViewBookings viewBookings = new ViewBookings();//opens a form called Menu
+                                    this.Hide();//hides the previous form
+                                    viewBookings.ShowDialog();//opens the form
+                                    this.Close();//closes the form
+                                }
+                                else
+                                {
+                                    Menu menu = new Menu();//opens a form called Menu
+                                    this.Hide();//hides the previous form
+                                    menu.ShowDialog();//opens the form
+                                    this.Close();//closes the form
+                                }
+                            }
+                            else
+                            {
+                                const string LogoutConfirmation = "Payment Cancelled, you have not been charged";
+                                const string caption = "Payment";
+
+                                var result = MessageBox.Show(LogoutConfirmation, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
