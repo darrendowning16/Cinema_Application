@@ -361,7 +361,7 @@
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 50;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView1.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -469,49 +469,50 @@
             this.under4TicketsDataGridViewTextBoxColumn.DataPropertyName = "Under4Tickets";
             dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.under4TicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.under4TicketsDataGridViewTextBoxColumn.HeaderText = "Under4\'s Tickets";
+            this.under4TicketsDataGridViewTextBoxColumn.HeaderText = "Under4\'s";
             this.under4TicketsDataGridViewTextBoxColumn.Name = "under4TicketsDataGridViewTextBoxColumn";
             this.under4TicketsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.under4TicketsDataGridViewTextBoxColumn.Width = 130;
             // 
             // childTicketsDataGridViewTextBoxColumn
             // 
             this.childTicketsDataGridViewTextBoxColumn.DataPropertyName = "ChildTickets";
             dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.childTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
-            this.childTicketsDataGridViewTextBoxColumn.HeaderText = "Child Tickets";
+            this.childTicketsDataGridViewTextBoxColumn.HeaderText = "Child";
             this.childTicketsDataGridViewTextBoxColumn.Name = "childTicketsDataGridViewTextBoxColumn";
             this.childTicketsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.childTicketsDataGridViewTextBoxColumn.Width = 150;
+            this.childTicketsDataGridViewTextBoxColumn.Width = 130;
             // 
             // teenTicketsDataGridViewTextBoxColumn
             // 
             this.teenTicketsDataGridViewTextBoxColumn.DataPropertyName = "TeenTickets";
             dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.teenTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
-            this.teenTicketsDataGridViewTextBoxColumn.HeaderText = "Teen Tickets";
+            this.teenTicketsDataGridViewTextBoxColumn.HeaderText = "Teen";
             this.teenTicketsDataGridViewTextBoxColumn.Name = "teenTicketsDataGridViewTextBoxColumn";
             this.teenTicketsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.teenTicketsDataGridViewTextBoxColumn.Width = 150;
+            this.teenTicketsDataGridViewTextBoxColumn.Width = 130;
             // 
             // adultTicketsDataGridViewTextBoxColumn
             // 
             this.adultTicketsDataGridViewTextBoxColumn.DataPropertyName = "AdultTickets";
             dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.adultTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
-            this.adultTicketsDataGridViewTextBoxColumn.HeaderText = "Adult Tickets";
+            this.adultTicketsDataGridViewTextBoxColumn.HeaderText = "Adult";
             this.adultTicketsDataGridViewTextBoxColumn.Name = "adultTicketsDataGridViewTextBoxColumn";
             this.adultTicketsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adultTicketsDataGridViewTextBoxColumn.Width = 150;
+            this.adultTicketsDataGridViewTextBoxColumn.Width = 130;
             // 
             // seniorTicketsDataGridViewTextBoxColumn
             // 
             this.seniorTicketsDataGridViewTextBoxColumn.DataPropertyName = "SeniorTickets";
             dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.seniorTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
-            this.seniorTicketsDataGridViewTextBoxColumn.HeaderText = "Senior Tickets";
+            this.seniorTicketsDataGridViewTextBoxColumn.HeaderText = "Senior";
             this.seniorTicketsDataGridViewTextBoxColumn.Name = "seniorTicketsDataGridViewTextBoxColumn";
             this.seniorTicketsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.seniorTicketsDataGridViewTextBoxColumn.Width = 150;
+            this.seniorTicketsDataGridViewTextBoxColumn.Width = 130;
             // 
             // ViewBookings
             // 
