@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,6 +43,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblSignInEmail = new System.Windows.Forms.Label();
             this.txtSignInEmail = new MetroFramework.Controls.MetroTextBox();
             this.txtboxBookingEmail = new MetroFramework.Controls.MetroTextBox();
@@ -55,8 +57,8 @@
             this.icnbtnHome = new FontAwesome.Sharp.IconButton();
             this.lblNoRecords = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bookingApplicationDataSet = new BookingApplication.BookingApplicationDataSet();
             this.bookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookingApplicationDataSet = new BookingApplication.BookingApplicationDataSet();
             this.bookingsTableAdapter = new BookingApplication.BookingApplicationDataSetTableAdapters.BookingsTableAdapter();
             this.bookingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,8 +75,8 @@
             this.seniorTicketsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingApplicationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingApplicationDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSignInEmail
@@ -345,14 +347,14 @@
             this.adultTicketsDataGridViewTextBoxColumn,
             this.seniorTicketsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bookingsBindingSource;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -361,9 +363,9 @@
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 50;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView1.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 50;
@@ -372,15 +374,15 @@
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged_1);
             // 
-            // bookingApplicationDataSet
-            // 
-            this.bookingApplicationDataSet.DataSetName = "BookingApplicationDataSet";
-            this.bookingApplicationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // bookingsBindingSource
             // 
             this.bookingsBindingSource.DataMember = "Bookings";
             this.bookingsBindingSource.DataSource = this.bookingApplicationDataSet;
+            // 
+            // bookingApplicationDataSet
+            // 
+            this.bookingApplicationDataSet.DataSetName = "BookingApplicationDataSet";
+            this.bookingApplicationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bookingsTableAdapter
             // 
@@ -389,6 +391,8 @@
             // bookingIDDataGridViewTextBoxColumn
             // 
             this.bookingIDDataGridViewTextBoxColumn.DataPropertyName = "BookingID";
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.bookingIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.bookingIDDataGridViewTextBoxColumn.HeaderText = "BookingID";
             this.bookingIDDataGridViewTextBoxColumn.Name = "bookingIDDataGridViewTextBoxColumn";
             this.bookingIDDataGridViewTextBoxColumn.ReadOnly = true;
@@ -397,8 +401,8 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -407,8 +411,8 @@
             // bookingEmailDataGridViewTextBoxColumn
             // 
             this.bookingEmailDataGridViewTextBoxColumn.DataPropertyName = "BookingEmail";
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.bookingEmailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.bookingEmailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.bookingEmailDataGridViewTextBoxColumn.HeaderText = "Booking Email";
             this.bookingEmailDataGridViewTextBoxColumn.Name = "bookingEmailDataGridViewTextBoxColumn";
             this.bookingEmailDataGridViewTextBoxColumn.ReadOnly = true;
@@ -417,8 +421,8 @@
             // movieDataGridViewTextBoxColumn
             // 
             this.movieDataGridViewTextBoxColumn.DataPropertyName = "Movie";
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.movieDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.movieDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.movieDataGridViewTextBoxColumn.HeaderText = "Movie";
             this.movieDataGridViewTextBoxColumn.Name = "movieDataGridViewTextBoxColumn";
             this.movieDataGridViewTextBoxColumn.ReadOnly = true;
@@ -427,8 +431,8 @@
             // movieTimeDataGridViewTextBoxColumn
             // 
             this.movieTimeDataGridViewTextBoxColumn.DataPropertyName = "MovieTime";
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.movieTimeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.movieTimeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.movieTimeDataGridViewTextBoxColumn.HeaderText = "Time";
             this.movieTimeDataGridViewTextBoxColumn.Name = "movieTimeDataGridViewTextBoxColumn";
             this.movieTimeDataGridViewTextBoxColumn.ReadOnly = true;
@@ -437,20 +441,20 @@
             // ticketPriceDataGridViewTextBoxColumn
             // 
             this.ticketPriceDataGridViewTextBoxColumn.DataPropertyName = "TicketPrice";
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.ticketPriceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.ticketPriceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.ticketPriceDataGridViewTextBoxColumn.HeaderText = "Ticket Price";
             this.ticketPriceDataGridViewTextBoxColumn.Name = "ticketPriceDataGridViewTextBoxColumn";
             this.ticketPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ticketPriceDataGridViewTextBoxColumn.Width = 180;
+            this.ticketPriceDataGridViewTextBoxColumn.Width = 150;
             // 
             // paymentTypeDataGridViewTextBoxColumn
             // 
             this.paymentTypeDataGridViewTextBoxColumn.DataPropertyName = "PaymentType";
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.paymentTypeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.paymentTypeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.paymentTypeDataGridViewTextBoxColumn.HeaderText = "Payment Type";
             this.paymentTypeDataGridViewTextBoxColumn.Name = "paymentTypeDataGridViewTextBoxColumn";
             this.paymentTypeDataGridViewTextBoxColumn.ReadOnly = true;
@@ -459,6 +463,8 @@
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.emailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
@@ -467,8 +473,8 @@
             // under4TicketsDataGridViewTextBoxColumn
             // 
             this.under4TicketsDataGridViewTextBoxColumn.DataPropertyName = "Under4Tickets";
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.under4TicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.under4TicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.under4TicketsDataGridViewTextBoxColumn.HeaderText = "Under4\'s";
             this.under4TicketsDataGridViewTextBoxColumn.Name = "under4TicketsDataGridViewTextBoxColumn";
             this.under4TicketsDataGridViewTextBoxColumn.ReadOnly = true;
@@ -477,8 +483,8 @@
             // childTicketsDataGridViewTextBoxColumn
             // 
             this.childTicketsDataGridViewTextBoxColumn.DataPropertyName = "ChildTickets";
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.childTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.childTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.childTicketsDataGridViewTextBoxColumn.HeaderText = "Child";
             this.childTicketsDataGridViewTextBoxColumn.Name = "childTicketsDataGridViewTextBoxColumn";
             this.childTicketsDataGridViewTextBoxColumn.ReadOnly = true;
@@ -487,8 +493,8 @@
             // teenTicketsDataGridViewTextBoxColumn
             // 
             this.teenTicketsDataGridViewTextBoxColumn.DataPropertyName = "TeenTickets";
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.teenTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.teenTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.teenTicketsDataGridViewTextBoxColumn.HeaderText = "Teen";
             this.teenTicketsDataGridViewTextBoxColumn.Name = "teenTicketsDataGridViewTextBoxColumn";
             this.teenTicketsDataGridViewTextBoxColumn.ReadOnly = true;
@@ -497,8 +503,8 @@
             // adultTicketsDataGridViewTextBoxColumn
             // 
             this.adultTicketsDataGridViewTextBoxColumn.DataPropertyName = "AdultTickets";
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.adultTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.adultTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
             this.adultTicketsDataGridViewTextBoxColumn.HeaderText = "Adult";
             this.adultTicketsDataGridViewTextBoxColumn.Name = "adultTicketsDataGridViewTextBoxColumn";
             this.adultTicketsDataGridViewTextBoxColumn.ReadOnly = true;
@@ -507,12 +513,11 @@
             // seniorTicketsDataGridViewTextBoxColumn
             // 
             this.seniorTicketsDataGridViewTextBoxColumn.DataPropertyName = "SeniorTickets";
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.seniorTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.seniorTicketsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
             this.seniorTicketsDataGridViewTextBoxColumn.HeaderText = "Senior";
             this.seniorTicketsDataGridViewTextBoxColumn.Name = "seniorTicketsDataGridViewTextBoxColumn";
             this.seniorTicketsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.seniorTicketsDataGridViewTextBoxColumn.Width = 130;
             // 
             // ViewBookings
             // 
@@ -529,8 +534,8 @@
             this.Load += new System.EventHandler(this.ViewBookings_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingApplicationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingApplicationDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

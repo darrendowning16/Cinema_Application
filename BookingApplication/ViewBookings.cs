@@ -21,11 +21,11 @@ namespace BookingApplication
         public ViewBookings()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterScreen; // Centers the screen
         }
 
         //Variables to allow me to pass data to the edit form 
-        public static string UsersName = "";
+        public static string UsersName = ""; 
         public static string BookingEmail = "";
         public static string MovieName = "";
         public static string MovieTime = "";
@@ -36,20 +36,21 @@ namespace BookingApplication
 
         private void ViewBookings_Load(object sender, EventArgs e)
         {
-            txtSignInEmail.Text = Login.Email;
-            iconbtnEdit.Visible = false;
+            txtSignInEmail.Text = Login.Email; // Sets the SignedInEmail text box to the email that was used to login
+            iconbtnEdit.Visible = false; // Sets the visibility of the Edit button to false when the application first loads
         }
 
+        // Search email button is clicked
         private void btnSearchEmail_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtboxBookingEmail.Text.Trim()))
+            if (string.IsNullOrEmpty(txtboxBookingEmail.Text.Trim())) // Checks if txtboxBookingEmail textbox is empty, also trims any whitespace from the beginning and end of the text to avoid errors with accidental spaces
             {
-                const string EmailRequired = "Booking Email can not be empty";
-                const string caption = "Blank Email";
+                const string EmailRequired = "Booking Email can not be empty"; // Creates a constant variable called EmailRequired to be used in a message box
+                const string caption = "Blank Email"; // Creates a constant variable called caption to be used in a message box
 
-                var result = MessageBox.Show(EmailRequired, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var result = MessageBox.Show(EmailRequired, caption, MessageBoxButtons.OK, MessageBoxIcon.Error); // Creates a result variable that contains the message from the emailRequired variable, also passes in the caption variable
             }
-            else
+            else // If the txtboxBookingEmail textbox is not empty then the else will run
             {
                 string EmailPattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
                 if (Regex.IsMatch(txtboxBookingEmail.Text.Trim(), EmailPattern))

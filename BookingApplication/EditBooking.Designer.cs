@@ -92,7 +92,7 @@
             this.txtBoxEditName.UseSelectable = true;
             this.txtBoxEditName.WaterMark = "Enter your Name";
             this.txtBoxEditName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBoxEditName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxEditName.WaterMarkFont = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // lblEditName
             // 
@@ -144,7 +144,7 @@
             this.txtBoxEditBookingEmail.UseSelectable = true;
             this.txtBoxEditBookingEmail.WaterMark = "Enter your Email";
             this.txtBoxEditBookingEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBoxEditBookingEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxEditBookingEmail.WaterMarkFont = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // lblEditMovie
             // 
@@ -160,6 +160,7 @@
             // 
             this.comboBoxEditMovieNames.BackColor = System.Drawing.Color.Black;
             this.comboBoxEditMovieNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEditMovieNames.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditMovieNames.ForeColor = System.Drawing.Color.White;
             this.comboBoxEditMovieNames.FormattingEnabled = true;
             this.comboBoxEditMovieNames.Items.AddRange(new object[] {
@@ -173,13 +174,14 @@
             "Terminator"});
             this.comboBoxEditMovieNames.Location = new System.Drawing.Point(26, 214);
             this.comboBoxEditMovieNames.Name = "comboBoxEditMovieNames";
-            this.comboBoxEditMovieNames.Size = new System.Drawing.Size(203, 21);
+            this.comboBoxEditMovieNames.Size = new System.Drawing.Size(203, 23);
             this.comboBoxEditMovieNames.TabIndex = 14;
             // 
             // comboBoxEditMovieTimes
             // 
             this.comboBoxEditMovieTimes.BackColor = System.Drawing.Color.Black;
             this.comboBoxEditMovieTimes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEditMovieTimes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditMovieTimes.ForeColor = System.Drawing.Color.White;
             this.comboBoxEditMovieTimes.FormattingEnabled = true;
             this.comboBoxEditMovieTimes.Items.AddRange(new object[] {
@@ -191,7 +193,7 @@
             "22:00:00"});
             this.comboBoxEditMovieTimes.Location = new System.Drawing.Point(26, 272);
             this.comboBoxEditMovieTimes.Name = "comboBoxEditMovieTimes";
-            this.comboBoxEditMovieTimes.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxEditMovieTimes.Size = new System.Drawing.Size(121, 23);
             this.comboBoxEditMovieTimes.TabIndex = 15;
             // 
             // lblEditTime
@@ -208,6 +210,7 @@
             // 
             this.lblEditFinalPrice.BackColor = System.Drawing.Color.Gainsboro;
             this.lblEditFinalPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEditFinalPrice.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditFinalPrice.ForeColor = System.Drawing.Color.Black;
             this.lblEditFinalPrice.Location = new System.Drawing.Point(370, 279);
             this.lblEditFinalPrice.Name = "lblEditFinalPrice";
@@ -219,6 +222,7 @@
             // 
             this.lblEditTotal.BackColor = System.Drawing.Color.Gainsboro;
             this.lblEditTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEditTotal.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditTotal.Location = new System.Drawing.Point(275, 279);
             this.lblEditTotal.Name = "lblEditTotal";
             this.lblEditTotal.Size = new System.Drawing.Size(89, 26);
@@ -230,6 +234,7 @@
             // 
             this.comboBoxEditTeen.BackColor = System.Drawing.Color.Black;
             this.comboBoxEditTeen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEditTeen.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditTeen.ForeColor = System.Drawing.Color.White;
             this.comboBoxEditTeen.FormattingEnabled = true;
             this.comboBoxEditTeen.Items.AddRange(new object[] {
@@ -245,7 +250,7 @@
             "9"});
             this.comboBoxEditTeen.Location = new System.Drawing.Point(370, 176);
             this.comboBoxEditTeen.Name = "comboBoxEditTeen";
-            this.comboBoxEditTeen.Size = new System.Drawing.Size(89, 21);
+            this.comboBoxEditTeen.Size = new System.Drawing.Size(89, 23);
             this.comboBoxEditTeen.TabIndex = 24;
             this.comboBoxEditTeen.SelectedIndexChanged += new System.EventHandler(this.comboBoxEditTeen_SelectedIndexChanged);
             // 
@@ -253,6 +258,7 @@
             // 
             this.comboBoxEditSenior.BackColor = System.Drawing.Color.Black;
             this.comboBoxEditSenior.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEditSenior.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditSenior.ForeColor = System.Drawing.Color.White;
             this.comboBoxEditSenior.FormattingEnabled = true;
             this.comboBoxEditSenior.Items.AddRange(new object[] {
@@ -268,7 +274,7 @@
             "9"});
             this.comboBoxEditSenior.Location = new System.Drawing.Point(370, 210);
             this.comboBoxEditSenior.Name = "comboBoxEditSenior";
-            this.comboBoxEditSenior.Size = new System.Drawing.Size(89, 21);
+            this.comboBoxEditSenior.Size = new System.Drawing.Size(89, 23);
             this.comboBoxEditSenior.TabIndex = 25;
             this.comboBoxEditSenior.SelectedIndexChanged += new System.EventHandler(this.comboBoxEditSenior_SelectedIndexChanged);
             // 
@@ -276,6 +282,7 @@
             // 
             this.comboBoxEditAdult.BackColor = System.Drawing.Color.Black;
             this.comboBoxEditAdult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEditAdult.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditAdult.ForeColor = System.Drawing.Color.White;
             this.comboBoxEditAdult.FormattingEnabled = true;
             this.comboBoxEditAdult.Items.AddRange(new object[] {
@@ -291,7 +298,7 @@
             "9"});
             this.comboBoxEditAdult.Location = new System.Drawing.Point(370, 244);
             this.comboBoxEditAdult.Name = "comboBoxEditAdult";
-            this.comboBoxEditAdult.Size = new System.Drawing.Size(89, 21);
+            this.comboBoxEditAdult.Size = new System.Drawing.Size(89, 23);
             this.comboBoxEditAdult.TabIndex = 26;
             this.comboBoxEditAdult.SelectedIndexChanged += new System.EventHandler(this.comboBoxEditAdult_SelectedIndexChanged);
             // 
@@ -299,6 +306,7 @@
             // 
             this.comboBoxEditChild.BackColor = System.Drawing.Color.Black;
             this.comboBoxEditChild.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEditChild.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditChild.ForeColor = System.Drawing.Color.White;
             this.comboBoxEditChild.FormattingEnabled = true;
             this.comboBoxEditChild.Items.AddRange(new object[] {
@@ -314,7 +322,7 @@
             "9"});
             this.comboBoxEditChild.Location = new System.Drawing.Point(370, 141);
             this.comboBoxEditChild.Name = "comboBoxEditChild";
-            this.comboBoxEditChild.Size = new System.Drawing.Size(89, 21);
+            this.comboBoxEditChild.Size = new System.Drawing.Size(89, 23);
             this.comboBoxEditChild.TabIndex = 23;
             this.comboBoxEditChild.SelectedIndexChanged += new System.EventHandler(this.comboBoxEditChild_SelectedIndexChanged);
             // 
@@ -322,6 +330,7 @@
             // 
             this.comboBoxEditUnder4.BackColor = System.Drawing.Color.Black;
             this.comboBoxEditUnder4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEditUnder4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditUnder4.ForeColor = System.Drawing.Color.White;
             this.comboBoxEditUnder4.FormattingEnabled = true;
             this.comboBoxEditUnder4.Items.AddRange(new object[] {
@@ -337,7 +346,7 @@
             "9"});
             this.comboBoxEditUnder4.Location = new System.Drawing.Point(370, 106);
             this.comboBoxEditUnder4.Name = "comboBoxEditUnder4";
-            this.comboBoxEditUnder4.Size = new System.Drawing.Size(89, 21);
+            this.comboBoxEditUnder4.Size = new System.Drawing.Size(89, 23);
             this.comboBoxEditUnder4.TabIndex = 22;
             this.comboBoxEditUnder4.SelectedIndexChanged += new System.EventHandler(this.comboBoxEditUnder4_SelectedIndexChanged);
             // 
@@ -345,6 +354,7 @@
             // 
             this.lblEditUnder4.BackColor = System.Drawing.Color.Gainsboro;
             this.lblEditUnder4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEditUnder4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditUnder4.Location = new System.Drawing.Point(275, 106);
             this.lblEditUnder4.Name = "lblEditUnder4";
             this.lblEditUnder4.Size = new System.Drawing.Size(89, 26);
@@ -356,6 +366,7 @@
             // 
             this.lblEditAdult.BackColor = System.Drawing.Color.Gainsboro;
             this.lblEditAdult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEditAdult.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditAdult.Location = new System.Drawing.Point(275, 244);
             this.lblEditAdult.Name = "lblEditAdult";
             this.lblEditAdult.Size = new System.Drawing.Size(89, 26);
@@ -367,6 +378,7 @@
             // 
             this.lblEditSenior.BackColor = System.Drawing.Color.Gainsboro;
             this.lblEditSenior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEditSenior.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditSenior.Location = new System.Drawing.Point(275, 210);
             this.lblEditSenior.Name = "lblEditSenior";
             this.lblEditSenior.Size = new System.Drawing.Size(89, 26);
@@ -378,6 +390,7 @@
             // 
             this.lblEditTeen.BackColor = System.Drawing.Color.Gainsboro;
             this.lblEditTeen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEditTeen.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditTeen.Location = new System.Drawing.Point(275, 176);
             this.lblEditTeen.Name = "lblEditTeen";
             this.lblEditTeen.Size = new System.Drawing.Size(89, 26);
@@ -389,6 +402,7 @@
             // 
             this.lblEditChild.BackColor = System.Drawing.Color.Gainsboro;
             this.lblEditChild.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEditChild.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditChild.Location = new System.Drawing.Point(275, 141);
             this.lblEditChild.Name = "lblEditChild";
             this.lblEditChild.Size = new System.Drawing.Size(89, 26);
@@ -439,6 +453,7 @@
             this.IconbtnEditLogOut.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.IconbtnEditLogOut.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.IconbtnEditLogOut.IconColor = System.Drawing.Color.Black;
+            this.IconbtnEditLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconbtnEditLogOut.IconSize = 40;
             this.IconbtnEditLogOut.Location = new System.Drawing.Point(369, 15);
             this.IconbtnEditLogOut.Name = "IconbtnEditLogOut";
@@ -459,6 +474,7 @@
             this.IconbtnExitEdit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.IconbtnExitEdit.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
             this.IconbtnExitEdit.IconColor = System.Drawing.Color.Black;
+            this.IconbtnExitEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconbtnExitEdit.IconSize = 40;
             this.IconbtnExitEdit.Location = new System.Drawing.Point(420, 12);
             this.IconbtnExitEdit.Name = "IconbtnExitEdit";
@@ -511,7 +527,7 @@
             this.txtBoxEditPaymentType.TabIndex = 37;
             this.txtBoxEditPaymentType.UseSelectable = true;
             this.txtBoxEditPaymentType.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBoxEditPaymentType.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxEditPaymentType.WaterMarkFont = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // lblEditPaymentType
             // 
@@ -534,6 +550,7 @@
             this.icnEditSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.icnEditSave.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.icnEditSave.IconColor = System.Drawing.Color.Black;
+            this.icnEditSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icnEditSave.IconSize = 40;
             this.icnEditSave.Location = new System.Drawing.Point(415, 330);
             this.icnEditSave.Name = "icnEditSave";
@@ -554,6 +571,7 @@
             this.icnEditReset.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.icnEditReset.IconChar = FontAwesome.Sharp.IconChar.Undo;
             this.icnEditReset.IconColor = System.Drawing.Color.Black;
+            this.icnEditReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icnEditReset.IconSize = 40;
             this.icnEditReset.Location = new System.Drawing.Point(350, 330);
             this.icnEditReset.Name = "icnEditReset";
@@ -574,6 +592,7 @@
             this.icnbtnEditHome.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.icnbtnEditHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.icnbtnEditHome.IconColor = System.Drawing.Color.Black;
+            this.icnbtnEditHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icnbtnEditHome.IconSize = 40;
             this.icnbtnEditHome.Location = new System.Drawing.Point(275, 330);
             this.icnbtnEditHome.Name = "icnbtnEditHome";
