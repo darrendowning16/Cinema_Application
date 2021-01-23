@@ -124,6 +124,7 @@
             this.btnExitRegister.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnExitRegister.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
             this.btnExitRegister.IconColor = System.Drawing.Color.Black;
+            this.btnExitRegister.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExitRegister.IconSize = 40;
             this.btnExitRegister.Location = new System.Drawing.Point(747, 12);
             this.btnExitRegister.Name = "btnExitRegister";
@@ -295,6 +296,7 @@
             this.iconBtnBack.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconBtnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             this.iconBtnBack.IconColor = System.Drawing.Color.Black;
+            this.iconBtnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnBack.IconSize = 30;
             this.iconBtnBack.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconBtnBack.Location = new System.Drawing.Point(34, 345);
@@ -314,6 +316,7 @@
             this.iconBtnRegister.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconBtnRegister.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.iconBtnRegister.IconColor = System.Drawing.Color.Black;
+            this.iconBtnRegister.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnRegister.IconSize = 30;
             this.iconBtnRegister.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconBtnRegister.Location = new System.Drawing.Point(210, 345);
@@ -332,9 +335,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 416);
+            this.Controls.Add(this.picBoxRegister);
             this.Controls.Add(this.iconBtnRegister);
             this.Controls.Add(this.iconBtnBack);
-            this.Controls.Add(this.picBoxRegister);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +17,10 @@ namespace BookingApplication
         SqlCommand cmd;
 
 
-        double total = Convert.ToDouble(ViewBookings.TicketPrice), editTotal;
+        decimal total = Convert.ToDecimal(ViewBookings.TicketPrice), editTotal;
         int under4, child, teen, adult, senior;
+        const decimal CreditCardFee = 0.05M;
+        const decimal PaypalFee = 0.03M;
 
         public EditBooking()
         {
@@ -142,8 +144,8 @@ namespace BookingApplication
                     {
                         if (txtBoxEditPaymentType.Text == "Credit Card")
                         {
-                            string UpdatePayment = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + (editTotal + editTotal * 0.05).ToString("F")
-                            + Environment.NewLine + Environment.NewLine + "Remaining Cost to be paid: £" + ((editTotal + editTotal * 0.05) - total).ToString("F")
+                            string UpdatePayment = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + (editTotal + editTotal * CreditCardFee).ToString("F")
+                            + Environment.NewLine + Environment.NewLine + "Remaining Cost to be paid: £" + ((editTotal + editTotal * CreditCardFee) - total).ToString("F")
                             + Environment.NewLine + Environment.NewLine + "Confirm?";
                             string captionUpdatePayment = "Payment";
 
@@ -152,7 +154,7 @@ namespace BookingApplication
                             if (resultUpdatePayment == DialogResult.Yes)
                             {
                                 con.Open(); // Opens the connection
-                                cmd = new SqlCommand("UPDATE dbo.Bookings SET Name=@Name, BookingEmail=@BookingEmail, Movie=@Movie, MovieTime=@MovieTime, TicketPrice=@TicketPrice, PaymentType=@PaymentType, Email=@Email WHERE BookingID=@BookingID", con);
+                                cmd = new SqlCommand("UPDATE dbo.Bookings SET Name=@Name, BookingEmail=@BookingEmail, Movie=@Movie, MovieTime=@MovieTime, TicketPrice=@TicketPrice, PaymentType=@PaymentType, Email=@Email, Under4Tickets=@Under4Tickets, ChildTickets=@ChildTickets, TeenTickets=@TeenTickets, AdultTickets=@AdultTickets, SeniorTickets=@SeniorTickets WHERE BookingID=@BookingID", con);
                                 cmd.Parameters.AddWithValue("@BookingID", BookingID); // Stores the ID collected from the command to the @ID variable
                                 cmd.Parameters.AddWithValue("@Name", txtBoxEditName.Text);
                                 cmd.Parameters.AddWithValue("@BookingEmail", txtBoxEditBookingEmail.Text);
@@ -161,6 +163,11 @@ namespace BookingApplication
                                 cmd.Parameters.AddWithValue("@TicketPrice", lblEditFinalPrice.Text);
                                 cmd.Parameters.AddWithValue("@PaymentType", txtBoxEditPaymentType.Text);
                                 cmd.Parameters.AddWithValue("@Email", Login.Email);
+                                cmd.Parameters.AddWithValue("@Under4Tickets", comboBoxEditUnder4.SelectedItem);
+                                cmd.Parameters.AddWithValue("@ChildTickets", comboBoxEditChild.SelectedItem);
+                                cmd.Parameters.AddWithValue("@TeenTickets", comboBoxEditTeen.SelectedItem);
+                                cmd.Parameters.AddWithValue("@AdultTickets", comboBoxEditAdult.SelectedItem);
+                                cmd.Parameters.AddWithValue("@SeniorTickets", comboBoxEditSenior.SelectedItem);
 
                                 cmd.ExecuteNonQuery(); // Executes the query (Non query is for UPDATE, INSERT AND DELETE statements)
                                 MessageBox.Show("Booking Updated Successfully");
@@ -189,8 +196,8 @@ namespace BookingApplication
                         }
                         else
                         {
-                            string UpdatePayment = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + (editTotal + editTotal * 0.03).ToString("F")
-                            + Environment.NewLine + Environment.NewLine + "Remaining Cost to be paid: £" + ((editTotal + editTotal * 0.03) - total).ToString("F")
+                            string UpdatePayment = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + (editTotal + editTotal * PaypalFee).ToString("F")
+                            + Environment.NewLine + Environment.NewLine + "Remaining Cost to be paid: £" + ((editTotal + editTotal * PaypalFee) - total).ToString("F")
                             + Environment.NewLine + Environment.NewLine + "Confirm?";
                             string captionUpdatePayment = "Payment";
 
@@ -199,7 +206,7 @@ namespace BookingApplication
                             if (resultUpdatePayment == DialogResult.Yes)
                             {
                                 con.Open(); // Opens the connection
-                                cmd = new SqlCommand("UPDATE dbo.Bookings SET Name=@Name, BookingEmail=@BookingEmail, Movie=@Movie, MovieTime=@MovieTime, TicketPrice=@TicketPrice, PaymentType=@PaymentType, Email=@Email WHERE BookingID=@BookingID", con);
+                                cmd = new SqlCommand("UPDATE dbo.Bookings SET Name=@Name, BookingEmail=@BookingEmail, Movie=@Movie, MovieTime=@MovieTime, TicketPrice=@TicketPrice, PaymentType=@PaymentType, Email=@Email, Under4Tickets=@Under4Tickets, ChildTickets=@ChildTickets, TeenTickets=@TeenTickets, AdultTickets=@AdultTickets, SeniorTickets=@SeniorTickets WHERE BookingID=@BookingID", con);
                                 cmd.Parameters.AddWithValue("@BookingID", BookingID); // Stores the ID collected from the command to the @ID variable
                                 cmd.Parameters.AddWithValue("@Name", txtBoxEditName.Text);
                                 cmd.Parameters.AddWithValue("@BookingEmail", txtBoxEditBookingEmail.Text);
@@ -208,8 +215,14 @@ namespace BookingApplication
                                 cmd.Parameters.AddWithValue("@TicketPrice", lblEditFinalPrice.Text);
                                 cmd.Parameters.AddWithValue("@PaymentType", txtBoxEditPaymentType.Text);
                                 cmd.Parameters.AddWithValue("@Email", Login.Email);
+                                cmd.Parameters.AddWithValue("@Under4Tickets", comboBoxEditUnder4.SelectedItem);
+                                cmd.Parameters.AddWithValue("@ChildTickets", comboBoxEditChild.SelectedItem);
+                                cmd.Parameters.AddWithValue("@TeenTickets", comboBoxEditTeen.SelectedItem);
+                                cmd.Parameters.AddWithValue("@AdultTickets", comboBoxEditAdult.SelectedItem);
+                                cmd.Parameters.AddWithValue("@SeniorTickets", comboBoxEditSenior.SelectedItem);
 
                                 cmd.ExecuteNonQuery(); // Executes the query (Non query is for UPDATE, INSERT AND DELETE statements)
+                                
                                 MessageBox.Show("Booking Updated Successfully");
                                 con.Close();
 
@@ -239,8 +252,8 @@ namespace BookingApplication
                     {
                         if (txtBoxEditPaymentType.Text == "Credit Card")
                         {
-                            string UpdatePaymentplus = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + (editTotal + editTotal * 0.05).ToString("F")
-                            + Environment.NewLine + Environment.NewLine + "You will be refunded: £" + (total - (editTotal + editTotal * 0.05)).ToString("F")
+                            string UpdatePaymentplus = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + (editTotal + editTotal * CreditCardFee).ToString("F")
+                            + Environment.NewLine + Environment.NewLine + "You will be refunded: £" + (total - (editTotal + editTotal * CreditCardFee)).ToString("F")
                             + Environment.NewLine + Environment.NewLine + "Confirm?";
                             string captionUpdatePaymentplus = "Confirm?";
 
@@ -250,7 +263,7 @@ namespace BookingApplication
                             if (resultUpdatePaymentplus == DialogResult.Yes)
                             {
                                 con.Open(); // Opens the connection
-                                cmd = new SqlCommand("UPDATE dbo.Bookings SET Name=@Name, BookingEmail=@BookingEmail, Movie=@Movie, MovieTime=@MovieTime, TicketPrice=@TicketPrice, PaymentType=@PaymentType, Email=@Email WHERE BookingID=@BookingID", con);
+                                cmd = new SqlCommand("UPDATE dbo.Bookings SET Name=@Name, BookingEmail=@BookingEmail, Movie=@Movie, MovieTime=@MovieTime, TicketPrice=@TicketPrice, PaymentType=@PaymentType, Email=@Email, Under4Tickets=@Under4Tickets, ChildTickets=@ChildTickets, TeenTickets=@TeenTickets, AdultTickets=@AdultTickets, SeniorTickets=@SeniorTickets WHERE BookingID=@BookingID", con);
                                 cmd.Parameters.AddWithValue("@BookingID", BookingID); // Stores the ID collected from the command to the @ID variable
                                 cmd.Parameters.AddWithValue("@Name", txtBoxEditName.Text);
                                 cmd.Parameters.AddWithValue("@BookingEmail", txtBoxEditBookingEmail.Text);
@@ -259,6 +272,11 @@ namespace BookingApplication
                                 cmd.Parameters.AddWithValue("@TicketPrice", lblEditFinalPrice.Text);
                                 cmd.Parameters.AddWithValue("@PaymentType", txtBoxEditPaymentType.Text);
                                 cmd.Parameters.AddWithValue("@Email", Login.Email);
+                                cmd.Parameters.AddWithValue("@Under4Tickets", comboBoxEditUnder4.SelectedItem);
+                                cmd.Parameters.AddWithValue("@ChildTickets", comboBoxEditChild.SelectedItem);
+                                cmd.Parameters.AddWithValue("@TeenTickets", comboBoxEditTeen.SelectedItem);
+                                cmd.Parameters.AddWithValue("@AdultTickets", comboBoxEditAdult.SelectedItem);
+                                cmd.Parameters.AddWithValue("@SeniorTickets", comboBoxEditSenior.SelectedItem);
 
                                 cmd.ExecuteNonQuery(); // Executes the query (Non query is for UPDATE, INSERT AND DELETE statements)
                                 MessageBox.Show("Record Updated Successfully");
@@ -294,8 +312,8 @@ namespace BookingApplication
                         }
                         else
                         {
-                            string UpdatePaymentplus = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + (editTotal + editTotal * 0.03).ToString("F")
-                            + Environment.NewLine + Environment.NewLine + "You will be refunded: £" + (total - (editTotal + editTotal * 0.03)).ToString("F")
+                            string UpdatePaymentplus = "Original Price: £" + total.ToString("F") + Environment.NewLine + "New Payment: £" + (editTotal + editTotal * PaypalFee).ToString("F")
+                            + Environment.NewLine + Environment.NewLine + "You will be refunded: £" + (total - (editTotal + editTotal * PaypalFee)).ToString("F")
                             + Environment.NewLine + Environment.NewLine + "Confirm?";
                             string captionUpdatePaymentplus = "Confirm?";
 
@@ -305,7 +323,7 @@ namespace BookingApplication
                             if (resultUpdatePaymentplus == DialogResult.Yes)
                             {
                                 con.Open(); // Opens the connection
-                                cmd = new SqlCommand("UPDATE dbo.Bookings SET Name=@Name, BookingEmail=@BookingEmail, Movie=@Movie, MovieTime=@MovieTime, TicketPrice=@TicketPrice, PaymentType=@PaymentType, Email=@Email WHERE BookingID=@BookingID", con);
+                                cmd = new SqlCommand("UPDATE dbo.Bookings SET Name=@Name, BookingEmail=@BookingEmail, Movie=@Movie, MovieTime=@MovieTime, TicketPrice=@TicketPrice, PaymentType=@PaymentType, Email=@Email, Under4Tickets=@Under4Tickets, ChildTickets=@ChildTickets, TeenTickets=@TeenTickets, AdultTickets=@AdultTickets, SeniorTickets=@SeniorTickets WHERE BookingID=@BookingID", con);
                                 cmd.Parameters.AddWithValue("@BookingID", BookingID); // Stores the ID collected from the command to the @ID variable
                                 cmd.Parameters.AddWithValue("@Name", txtBoxEditName.Text);
                                 cmd.Parameters.AddWithValue("@BookingEmail", txtBoxEditBookingEmail.Text);
@@ -314,6 +332,11 @@ namespace BookingApplication
                                 cmd.Parameters.AddWithValue("@TicketPrice", lblEditFinalPrice.Text);
                                 cmd.Parameters.AddWithValue("@PaymentType", txtBoxEditPaymentType.Text);
                                 cmd.Parameters.AddWithValue("@Email", Login.Email);
+                                cmd.Parameters.AddWithValue("@Under4Tickets", comboBoxEditUnder4.SelectedItem);
+                                cmd.Parameters.AddWithValue("@ChildTickets", comboBoxEditChild.SelectedItem);
+                                cmd.Parameters.AddWithValue("@TeenTickets", comboBoxEditTeen.SelectedItem);
+                                cmd.Parameters.AddWithValue("@AdultTickets", comboBoxEditAdult.SelectedItem);
+                                cmd.Parameters.AddWithValue("@SeniorTickets", comboBoxEditSenior.SelectedItem);
 
                                 cmd.ExecuteNonQuery(); // Executes the query (Non query is for UPDATE, INSERT AND DELETE statements)
                                 MessageBox.Show("Record Updated Successfully");
@@ -365,13 +388,13 @@ namespace BookingApplication
             {
                 editTotal = Convert.ToInt32((under4 + child + teen + adult + senior));
 
-                lblEditFinalPrice.Text = "£" + (editTotal + editTotal * 0.05 ).ToString("F");
+                lblEditFinalPrice.Text = "£" + (editTotal + editTotal * CreditCardFee).ToString("F");
             }
             else
             {
                 editTotal = Convert.ToInt32((under4 + child + teen + adult + senior));
 
-                lblEditFinalPrice.Text = "£" + (editTotal + editTotal * 0.03).ToString("F");
+                lblEditFinalPrice.Text = "£" + (editTotal + editTotal * PaypalFee).ToString("F");
             }
         }
     }
