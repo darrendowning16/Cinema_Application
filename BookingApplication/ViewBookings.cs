@@ -34,10 +34,31 @@ namespace BookingApplication
         public static string BookID = "";
         public static string Under4sEditTickets, ChildEditTickets, TeenEditTickets, AdultEditTickets, SeniorEditTickets;
 
+        //Used to count the amount of records in the data grid
+        private int count;
+
         private void ViewBookings_Load(object sender, EventArgs e)
         {
             txtSignInEmail.Text = Login.Email; // Sets the SignedInEmail text box to the email that was used to login
             iconbtnEdit.Visible = false; // Sets the visibility of the Edit button to false when the application first loads
+            iconbtnDelete.Visible = false;
+        }
+        
+        private void UpdateDataGrid()
+        {
+            string query = "SELECT * FROM Bookings WHERE Email = @Email AND BookingEmail = @BookingEmail "; // Creates a query to select all the records from the database that have the same email and bookinng email that was entered
+            SqlCommand cmd = new SqlCommand(query, con); // creates a new command and passes both the query variable and the connection string 
+            cmd.Parameters.AddWithValue("@Email", Login.Email); // Adds the Email that was used to login. Using Parameterized variables to avoid SQLInjection
+            cmd.Parameters.AddWithValue("@BookingEmail", txtboxBookingEmail.Text); // Adds the bookingEmail that was entered into the bookingEmail textbox. Using Parameterized variables to avoid SQLInjection
+            con.Open(); // Opens the connection
+            cmd.ExecuteNonQuery(); // Executes the query (Non query is for UPDATE, INSERT AND DELETE statements)
+            DataTable dt = new DataTable(); // creates a datatable and Stores the data in dt 
+            SqlDataAdapter da = new SqlDataAdapter(cmd); // Retrieves the data from the cmd command
+            da.Fill(dt); // Fills the da variable with the contents from the dt variable
+            dataGridView1.DataSource = dt;
+            count = dt.Rows.Count;
+            con.Close();
+            
         }
 
         // Search email button is clicked
@@ -55,21 +76,14 @@ namespace BookingApplication
                 string EmailPattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$"; // Creates a regex for an email address
                 if (Regex.IsMatch(txtboxBookingEmail.Text.Trim(), EmailPattern)) // Checks if the email entered matches the pattern set in the EmailPattern variable
                 {
-                    string query = "SELECT * FROM Bookings WHERE Email = @Email AND BookingEmail = @BookingEmail "; // Creates a query to select all the records from the database that have the same email and bookinng email that was entered
-                    SqlCommand cmd = new SqlCommand(query, con); // creates a new command and passes both the query variable and the connection string 
-                    cmd.Parameters.AddWithValue("@Email", Login.Email); // Adds the Email that was used to login. Using Parameterized variables to avoid SQLInjection
-                    cmd.Parameters.AddWithValue("@BookingEmail", txtboxBookingEmail.Text); // Adds the bookingEmail that was entered into the bookingEmail textbox. Using Parameterized variables to avoid SQLInjection
-                    con.Open(); // Opens the connection
-                    cmd.ExecuteNonQuery(); // Executes the query (Non query is for UPDATE, INSERT AND DELETE statements)
-                    DataTable dt = new DataTable(); // creates a datatable and Stores the data in dt 
-                    SqlDataAdapter da = new SqlDataAdapter(cmd); // Retrieves the data from the cmd command
-                    da.Fill(dt); // Fills the da variable with the contents from the dt variable
+                    UpdateDataGrid();
 
-                    if(dt.Rows.Count > 0) //Checks if there is any rows in the data table
+                    if (count > 0) //Checks if there is any rows in the data table
                     {
                         lblNoRecords.Hide(); // Hides the NoRecords label
                         iconbtnEdit.Visible = true; // Sets the pen icon to be visible
-                        dataGridView1.DataSource = dt; // Sets the data grid to hold the data from the dt variable
+                        iconbtnDelete.Visible = true;
+                        UpdateDataGrid(); // calls the UpdateDataGrid function
                         con.Close(); // Closes the database connection
                     }
                     else
@@ -106,6 +120,26 @@ namespace BookingApplication
                 this.Hide();//hides the previous form
                 login.ShowDialog();//opens the form
                 this.Close();//closes the form
+            }
+        }
+
+        private void iconbtnDelete_Click(object sender, EventArgs e)
+        {
+            const string DeleteConfirmation = "Are you sure you want to delete this booking?"; // Creates a constant variable called DeleteConfirmation to be used in a message box
+            const string caption = "Logging out"; // Creates a constant variable called caption to be used in a message box
+
+            var DeleteResult = MessageBox.Show(DeleteConfirmation, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question); // Creates a result variable that contains the message from the LogoutConfirmation variable, also passes in the caption variable
+
+            if (DeleteResult == DialogResult.Yes) // Checks the result of the dialog and if it is 'Yes' then the IF proceeds
+            {
+                string deleteQuery = @"DELETE FROM dbo.Bookings WHERE BookingID = @BookingID";
+                SqlCommand cmd = new SqlCommand(deleteQuery, con);
+                cmd.Parameters.AddWithValue("@BookingID", BookID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                UpdateDataGrid();
             }
         }
 
